@@ -207,7 +207,8 @@ Project Link: [https://github.com/subrotokumar/comet](https://github.com/subroto
 
 ## Powered by
 
-- Alchemy-SDK
+- Alchemy
+- QuickNode
 - CoinGecko
 - Etherscan
 
