@@ -1,5 +1,6 @@
 import 'package:comet/pages/auth/login_screen.dart';
 import 'package:comet/utils/lottie_asset.dart';
+import 'package:comet/utils/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:hive/hive.dart';
@@ -32,30 +33,7 @@ class _SplashScreenState extends State<WelcomeSplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      floatingActionButton: InkWell(
-        onTap: () => Navigator.push(
-          context,
-          PageTransition(
-            child: const LoginScreen(),
-            childCurrent: widget,
-            type: PageTransitionType.rightToLeftJoined,
-            duration: const Duration(milliseconds: 500),
-          ),
-        ),
-        child: Container(
-          height: 60,
-          width: 60,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(23),
-            color: Colors.black54,
-          ),
-          child: const Icon(
-            Icons.arrow_forward_ios_rounded,
-            color: Colors.white60,
-          ),
-        ),
-      ),
-      backgroundColor: Colors.purple,
+      backgroundColor: AppTheme.bodyBackgroundColor,
       body: Container(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -98,6 +76,30 @@ class _SplashScreenState extends State<WelcomeSplashScreen> {
                         Text(
                           'Secure • Powerfull • Easy',
                           style: GoogleFonts.poppins(fontSize: 15),
+                        ),
+                        SizedBox(height: 30),
+                        InkWell(
+                          onTap: () => Navigator.push(
+                            context,
+                            PageTransition(
+                              child: const LoginScreen(),
+                              childCurrent: widget,
+                              type: PageTransitionType.rightToLeftJoined,
+                              duration: const Duration(milliseconds: 500),
+                            ),
+                          ),
+                          child: Container(
+                            height: 60,
+                            width: 60,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(23),
+                              color: Colors.purpleAccent,
+                            ),
+                            child: const Icon(
+                              Icons.arrow_forward_ios_rounded,
+                              color: Colors.white60,
+                            ),
+                          ),
                         ),
                       ],
                     ),

@@ -25,6 +25,8 @@ class _SetPasscodeScreenState extends State<SetPasscodeScreen> {
 
   void clear() => setState(() => {n = ''});
 
+  bool isLoading = false;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -181,8 +183,11 @@ class _SetPasscodeScreenState extends State<SetPasscodeScreen> {
                   ],
                 ),
               ),
-              InkWell(
+              GestureDetector(
                 onTap: () async {
+                  setState(() {
+                    isLoading = true;
+                  });
                   await Provider.of<WalletProvider>(context, listen: false)
                       .storage
                       .write(key: 'loginPasscode', value: n);
@@ -196,6 +201,7 @@ class _SetPasscodeScreenState extends State<SetPasscodeScreen> {
                       duration: const Duration(milliseconds: 500),
                     ),
                   );
+                  isLoading = false;
                 },
                 child: Container(
                   height: 60,
@@ -204,15 +210,17 @@ class _SetPasscodeScreenState extends State<SetPasscodeScreen> {
                     borderRadius: BorderRadius.circular(25),
                     color: Colors.white30,
                   ),
-                  child: const Center(
-                    child: Text(
-                      'Create Passcode',
-                      style: TextStyle(
-                        color: AppTheme.textColor,
-                        fontSize: 18,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
+                  child: Center(
+                    child: isLoading
+                        ? CircularProgressIndicator()
+                        : Text(
+                            'Create Passcode',
+                            style: TextStyle(
+                              color: AppTheme.textColor,
+                              fontSize: 18,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
                   ),
                 ),
               ),

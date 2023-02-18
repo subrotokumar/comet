@@ -41,7 +41,7 @@ class WalletProvider with ChangeNotifier {
   Future<void> initialize() async {
     pref = await SharedPreferences.getInstance();
     client = Client();
-    _network = pref?.getInt('network') ?? 1;
+    _network = pref?.getInt('network') ?? 0;
     web3client = Web3Client(getNetwork.rpc, client);
 
     storage = const FlutterSecureStorage();

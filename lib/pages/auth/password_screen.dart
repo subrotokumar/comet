@@ -16,6 +16,7 @@ class PasswordScreen extends StatefulWidget {
 }
 
 class _PasswordScreenState extends State<PasswordScreen> {
+  bool isLoading = false;
   String n = '';
   void addN(String nn) {
     if (n.length < 6) {
@@ -129,6 +130,9 @@ class _PasswordScreenState extends State<PasswordScreen> {
               SizedBox(height: 30),
               GestureDetector(
                 onTap: () async {
+                  setState(() {
+                    isLoading = true;
+                  });
                   bool flag = await walletProvider.getLoggedByPassword(n);
                   if (flag) {
                     Navigator.pushReplacement(
@@ -140,6 +144,9 @@ class _PasswordScreenState extends State<PasswordScreen> {
                   } else {
                     snackBar('Wrong Password', context, vertical: 50);
                   }
+                  setState(() {
+                    isLoading = false;
+                  });
                 },
                 child: CircleAvatar(
                   radius: 30,
@@ -148,10 +155,12 @@ class _PasswordScreenState extends State<PasswordScreen> {
                       : Colors.blue,
                   foregroundColor:
                       Colors.white.withOpacity(n.length < 6 ? 0.2 : 1),
-                  child: Icon(
-                    Icons.arrow_forward,
-                    size: 40,
-                  ),
+                  child: isLoading
+                      ? CircularProgressIndicator()
+                      : Icon(
+                          Icons.arrow_forward,
+                          size: 40,
+                        ),
                 ),
               ),
               SizedBox(height: 50),

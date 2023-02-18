@@ -25,111 +25,110 @@ class _ScanQRScreenState extends State<ScanQRScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SizedBox(
-        width: double.infinity,
+        height: MediaQuery.of(context).size.height,
+        width: double.maxFinite,
         child: Stack(
           children: [
-            Expanded(
-              child: MobileScanner(
-                  allowDuplicates: false,
-                  controller: cameraController,
-                  onDetect: (barcode, args) {
-                    if (barcode.rawValue == null || false) {
-                      debugPrint('Failed to scan Barcode');
-                    } else {
-                      final String code = barcode.rawValue ?? '';
-                      int i = code.indexOf('0x');
-                      var code1 = code.substring(i, i + 42);
-                      if (code.contains('0x') || code.contains('.eth') || true)
-                        showModalBottomSheet(
-                          context: context,
-                          builder: (context) {
-                            return Padding(
-                              padding: const EdgeInsets.all(20.0),
-                              child: Column(
-                                mainAxisSize: MainAxisSize.min,
-                                children: [
-                                  Text(code1),
-                                  Row(
-                                    children: [
-                                      ElevatedButton(
-                                        onPressed: () {
-                                          Navigator.pop(context);
-                                          Navigator.pushReplacement(
-                                            context,
-                                            PageTransition(
-                                              child: SendTransactionScreen(
-                                                  address: code1),
-                                              type: PageTransitionType.fade,
-                                              duration:
-                                                  Duration(milliseconds: 500),
-                                            ),
-                                          );
-                                        },
-                                        child: Text('Send Crypto'),
-                                      ),
-                                      ElevatedButton(
-                                        onPressed: () {
-                                          if (Hive.box('crypto').isEmpty) {
-                                            snackBar(
-                                                'No token exist!', context);
-                                          }
-                                          Navigator.pop(context);
-                                          Navigator.pushReplacement(
-                                            context,
-                                            PageTransition(
-                                              child: SendTransactionScreen(
-                                                  address: code1),
-                                              type: PageTransitionType.fade,
-                                              duration:
-                                                  Duration(milliseconds: 500),
-                                            ),
-                                          );
-                                        },
-                                        child: Text('Send Token'),
-                                      ),
-                                    ],
-                                  )
-                                ],
-                              ),
-                            );
-                          },
-                        );
-                      // Navigator.pop(context);
-                    }
-                  }),
-            ),
-            Expanded(
-              child: Column(
-                children: [
-                  Expanded(
-                    child: Container(
-                      color: Colors.black54,
-                    ),
+            MobileScanner(
+                fit: BoxFit.cover,
+                allowDuplicates: false,
+                controller: cameraController,
+                onDetect: (barcode, args) {
+                  if (barcode.rawValue == null || false) {
+                    debugPrint('Failed to scan Barcode');
+                  } else {
+                    final String code = barcode.rawValue ?? '';
+                    int i = code.indexOf('0x');
+                    var code1 = code.substring(i, i + 42);
+                    if (code.contains('0x') || code.contains('.eth') || true)
+                      showModalBottomSheet(
+                        context: context,
+                        builder: (context) {
+                          return Padding(
+                            padding: const EdgeInsets.all(20.0),
+                            child: Column(
+                              mainAxisSize: MainAxisSize.min,
+                              children: [
+                                Text(code1),
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceAround,
+                                  children: [
+                                    ElevatedButton(
+                                      onPressed: () {
+                                        Navigator.pop(context);
+                                        Navigator.pushReplacement(
+                                          context,
+                                          PageTransition(
+                                            child: SendTransactionScreen(
+                                                address: code1),
+                                            type: PageTransitionType.fade,
+                                            duration:
+                                                Duration(milliseconds: 500),
+                                          ),
+                                        );
+                                      },
+                                      child: Text('Send Crypto'),
+                                    ),
+                                    ElevatedButton(
+                                      onPressed: () {
+                                        if (Hive.box('crypto').isEmpty) {
+                                          snackBar('No token exist!', context);
+                                        }
+                                        Navigator.pop(context);
+                                        Navigator.pushReplacement(
+                                          context,
+                                          PageTransition(
+                                            child: SendTransactionScreen(
+                                                address: code1),
+                                            type: PageTransitionType.fade,
+                                            duration:
+                                                Duration(milliseconds: 500),
+                                          ),
+                                        );
+                                      },
+                                      child: Text('Send Token'),
+                                    ),
+                                  ],
+                                )
+                              ],
+                            ),
+                          );
+                        },
+                      );
+                    // Navigator.pop(context);
+                  }
+                }),
+            Column(
+              children: [
+                Expanded(
+                  child: Container(
+                    color: Colors.black54,
                   ),
-                  Container(
-                    height: 400,
-                    decoration: BoxDecoration(
-                      color: Colors.transparent,
-                      border: Border.all(color: Colors.black54, width: 60),
-                    ),
+                ),
+                Container(
+                  height: 400,
+                  decoration: BoxDecoration(
+                    color: Colors.transparent,
+                    border: Border.all(color: Colors.black54, width: 60),
                   ),
-                  Expanded(
-                    child: Container(
-                      width: double.infinity,
-                      color: Colors.black54,
-                      child: const Center(
-                        child: Text(
-                          'Send crypto by scaning QR',
-                          style: TextStyle(
-                            fontSize: 18,
-                            fontWeight: FontWeight.w400,
-                          ),
+                ),
+                Expanded(
+                  child: Container(
+                    width: double.infinity,
+                    color: Colors.black54,
+                    child: const Center(
+                      child: Text(
+                        'Send crypto by scanning QR',
+                        style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.w400,
                         ),
                       ),
                     ),
                   ),
-                ],
-              ),
+                ),
+              ],
             ),
             CustomAppBar(cameraController: cameraController),
           ],

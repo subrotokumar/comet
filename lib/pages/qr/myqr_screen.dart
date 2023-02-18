@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:pretty_qr_code/pretty_qr_code.dart';
 import 'package:provider/provider.dart';
+import 'package:share_plus/share_plus.dart';
 
 import '../../utils/theme.dart';
 import '../../services/providers/walletprovider.dart';
@@ -99,7 +100,10 @@ class _ScanQRScreenState extends State<MyQrScreen> {
               ),
               child: InkWell(
                 borderRadius: BorderRadius.circular(25),
-                onTap: () {},
+                onTap: () {
+                  Share.share(
+                      'My ${currentNetwork.chainId == '1' || currentNetwork.chainId == '5' ? 'Ethereum' : 'Polygon'} address : $address');
+                },
                 child: const Center(
                   child: Text(
                     'Share your Address',

@@ -20,7 +20,10 @@
   <p align="center">
     Not just a crypto wallet
     <br />
-    <a href="https://comet-zeta.vercel.app/"><strong>Open <strong>Application</strong> »</strong></a>
+    <br>
+    <a href='https://play.google.com/store/apps/details?id=com.subrotokumar.comet'><img src='assets/meta/download-googleplay.png' width="150"></a>
+    <br>
+    <a href="https://play.google.com/store/apps/details?id=com.subrotokumar.comet"><strong>Open <strong>Application</strong> »</strong></a>
     <br />
     <br />
     <a href="https://github.com/subrotokumar/nyx">View Demo</a>
@@ -64,14 +67,16 @@
 <br>
 <p align='center'>
 <a href='https://comet-zeta.vercel.app/'>
+<center>
 <pre>
-<img src='./assets/meta/ss1.png' width="100">  <img src='./assets/meta/ss2.png' width="100">  <img src='./assets/meta/ss3.png' width="100">  <img src='./assets/meta/ss4.png' width="100">  <img src='./assets/meta/ss5.png' width="100">
+<img src='./assets/meta/ss1.png' width="150">  <img src='./assets/meta/ss2.png' width="150">  <img src='./assets/meta/ss3.png' width="150">  <img src='./assets/meta/ss4.png' width="150">  <img src='./assets/meta/ss5.png' width="150">
+</center>
 </pre>
 </a>
 </p>
 <br>
 
-
+Comet is the cross-platform cryptocurrency wallet built with Flutter.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
