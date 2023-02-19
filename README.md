@@ -15,10 +15,10 @@
     <img src="./assets/images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">Comet</h3>
+  <h3 align="center"><strong>COMET</strong></h6>
 
   <p align="center">
-    Not just a crypto wallet
+    Wallet that meets your needs!
     <br />
     <br>
     <a href='https://play.google.com/store/apps/details?id=com.subrotokumar.comet'><img src='assets/meta/download-googleplay.png' width="150"></a>
@@ -51,12 +51,12 @@
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
+    <!-- <li><a href="#usage">Usage</a></li> -->
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <!-- <li><a href="#license">License</a></li> -->
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
+    <li><a href="#acknowledgments">Credit</a></li>
   </ol>
 </details>
 
@@ -96,7 +96,7 @@ Frameworks/libraries used to this project:
 
 ## Getting Started
 
-To get a local copy up and running follow these simple example steps.
+To get a local copy up and run these simple steps.
 
 ### Prerequisites
 
@@ -150,13 +150,13 @@ The list things you need to use the application and how to install them.
 
 <!-- USAGE EXAMPLES -->
 
-## Usage
+<!-- ## Usage
 
 ChatGPT and OpenAI is becoming increasingly popular as an alternative to more traditional customer service methods, such as phone calls or emails.
 
 _For more info about OpenAI, please refer to the [Documentation](https://beta.openai.com/docs/introduction/overview)_
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#readme-top">back to top</a>)</p> -->
 
 <!-- ROADMAP -->
 
@@ -197,7 +197,9 @@ Don't forget to give the project a star! Thanks again!
 
 ## Contact
 
-Subroto Kumar - [@subrotokr](https://twitter.com/subrotokr) - subrotokumar@outlook.in
+Subroto Kumar 
+- **Twitter**: [@isubrotokumar](https://twitter.com/isubrotokumar) 
+- subrotokumar@outlook.in
 
 Project Link: [https://github.com/subrotokumar/comet](https://github.com/subrotokumar/comet)
 
@@ -205,12 +207,10 @@ Project Link: [https://github.com/subrotokumar/comet](https://github.com/subroto
 
 <!-- ACKNOWLEDGMENTS -->
 
-## Powered by
+## Credit / Powered by
 
-- Alchemy
-- QuickNode
-- CoinGecko
-- Etherscan
+CoinGecko  ∘  Etherscan  ∘  QuickNode  ∘  Alchemy  ∘  FlatIcon  ∘  LottieFiles
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
