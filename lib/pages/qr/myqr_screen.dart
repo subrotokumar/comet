@@ -1,13 +1,14 @@
-import 'package:comet/services/models/network.dart';
-import 'package:comet/services/functions/functions.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:pretty_qr_code/pretty_qr_code.dart';
 import 'package:provider/provider.dart';
 import 'package:share_plus/share_plus.dart';
 
-import '../../utils/theme.dart';
+import 'package:comet/services/functions/functions.dart';
+import 'package:comet/services/models/network.dart';
+
 import '../../services/providers/walletprovider.dart';
+import '../../utils/theme.dart';
 
 class MyQrScreen extends StatefulWidget {
   const MyQrScreen({super.key});

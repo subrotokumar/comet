@@ -1,14 +1,15 @@
 import 'dart:async';
 
-import 'package:comet/pages/splash/welcome_splash_screen.dart';
-import 'package:comet/pages/auth/password_screen.dart';
-import 'package:comet/utils/theme.dart';
-import 'package:comet/services/providers/walletprovider.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+
+import 'package:comet/pages/auth/password_screen.dart';
+import 'package:comet/pages/splash/welcome_splash_screen.dart';
+import 'package:comet/services/providers/walletprovider.dart';
+import 'package:comet/utils/theme.dart';
 
 class SplashScreen extends StatefulWidget {
   static const route = '/splash';

@@ -1,10 +1,12 @@
-import 'package:comet/pages/auth/set_passcode_screen.dart';
-import 'package:comet/services/functions/functions.dart';
-import '../../utils/theme.dart';
-import 'package:flutter/material.dart';
 import 'package:bip39/bip39.dart' as bip39;
+import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:page_transition/page_transition.dart';
+
+import 'package:comet/pages/auth/set_passcode_screen.dart';
+import 'package:comet/services/functions/functions.dart';
+
+import '../../utils/theme.dart';
 
 class RecoveryPhaseScreen extends StatefulWidget {
   const RecoveryPhaseScreen({super.key});

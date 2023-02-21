@@ -1,17 +1,16 @@
-import 'package:comet/pages/transaction_history/transaction_detail_screen.dart';
-import 'package:comet/services/functions/functions.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:page_transition/page_transition.dart';
-
-import '../../services/providers/transaction_provider.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:lottie/lottie.dart';
+import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
 import 'package:shimmer/shimmer.dart';
 import 'package:web3dart/web3dart.dart';
 
-import '../../utils/theme.dart';
-import '../../services/providers/walletprovider.dart';
+import 'package:comet/pages/transaction_history/transaction_detail_screen.dart';
+import 'package:comet/services/functions/functions.dart';
+import 'package:comet/services/providers/transaction_provider.dart';
+import 'package:comet/services/providers/walletprovider.dart';
+import 'package:comet/utils/theme.dart';
 
 class TransactionScreen extends StatelessWidget {
   const TransactionScreen({super.key});

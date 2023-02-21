@@ -1,9 +1,10 @@
-import 'package:comet/pages/send_transaction/send_transaction_screen.dart';
-import 'package:comet/services/functions/functions.dart';
 import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
 import 'package:mobile_scanner/mobile_scanner.dart';
 import 'package:page_transition/page_transition.dart';
+
+import 'package:comet/pages/send_transaction/send_transaction_screen.dart';
+import 'package:comet/services/functions/functions.dart';
 
 class ScanQRScreen extends StatefulWidget {
   ScanQRScreen({super.key});

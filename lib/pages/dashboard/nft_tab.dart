@@ -1,10 +1,12 @@
-import 'package:comet/services/providers/nft_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:lottie/lottie.dart';
 import 'package:provider/provider.dart';
 import 'package:shimmer/shimmer.dart';
 import 'package:universal_image/universal_image.dart';
+
+import 'package:comet/pages/dashboard/nft.screen.dart';
+import 'package:comet/services/providers/nft_provider.dart';
 
 class NftTab extends StatelessWidget {
   const NftTab({super.key});
@@ -69,9 +71,22 @@ class NftTab extends StatelessWidget {
                 return Card(
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(10),
-                    child: UniversalImage(
-                      nftProvider.list[index].mediaGateWay,
-                      fit: BoxFit.cover,
+                    child: InkWell(
+                      onTap: () => Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) {
+                            return NFTScreen(nftProvider.list[index]);
+                          },
+                        ),
+                      ),
+                      child: Hero(
+                        tag: 'NFT',
+                        child: UniversalImage(
+                          nftProvider.list[index].mediaGateWay,
+                          fit: BoxFit.cover,
+                        ),
+                      ),
                     ),
                   ),
                 );

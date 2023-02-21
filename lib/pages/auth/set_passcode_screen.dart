@@ -1,10 +1,11 @@
-import 'package:comet/pages/home.dart';
-import 'package:comet/services/providers/walletprovider.dart';
+import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
 
+import 'package:comet/pages/home.dart';
+import 'package:comet/services/providers/walletprovider.dart';
+
 import '../../utils/theme.dart';
-import 'package:flutter/material.dart';
 
 class SetPasscodeScreen extends StatefulWidget {
   SetPasscodeScreen(this._recovery, {super.key, this.hide = false});

@@ -1,7 +1,8 @@
 import 'dart:convert';
 
-import 'package:comet/services/providers/walletprovider.dart';
 import 'package:http/http.dart' as http;
+
+import 'package:comet/services/providers/walletprovider.dart';
 
 Future<List> getCurrentPrice(WalletProvider walletProvider,
     {String cur = 'usd'}) async {

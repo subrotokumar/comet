@@ -1,23 +1,24 @@
 import 'dart:convert';
 
-import 'package:comet/pages/dashboard/nft_tab.dart';
-import 'package:comet/pages/dashboard/crypto_tab.dart';
-import 'package:comet/pages/home.dart';
-import 'package:comet/services/functions/market.dart';
-import 'package:hive/hive.dart';
-import 'package:http/http.dart' as http;
-import '../../services/functions/functions.dart';
-import 'package:comet/pages/qr/myqr_screen.dart';
-import 'package:comet/pages/send_transaction/send_transaction_screen.dart';
-import 'package:comet/utils/theme.dart';
-import 'package:comet/services/providers/walletprovider.dart';
+import 'package:chart_sparkline/chart_sparkline.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:hive/hive.dart';
+import 'package:http/http.dart' as http;
 import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
 import 'package:shimmer/shimmer.dart';
-import 'package:chart_sparkline/chart_sparkline.dart';
 
+import 'package:comet/pages/dashboard/crypto_tab.dart';
+import 'package:comet/pages/dashboard/nft_tab.dart';
+import 'package:comet/pages/home.dart';
+import 'package:comet/pages/qr/myqr_screen.dart';
+import 'package:comet/pages/send_transaction/send_transaction_screen.dart';
+import 'package:comet/services/functions/market.dart';
+import 'package:comet/services/providers/walletprovider.dart';
+import 'package:comet/utils/theme.dart';
+
+import '../../services/functions/functions.dart';
 import '../qr/scan_qr_screen.dart';
 
 class WalletScreen extends StatefulWidget {

@@ -1,17 +1,19 @@
+import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+
 import 'package:comet/pages/Settings/setting_screen.dart';
 import 'package:comet/services/providers/walletprovider.dart';
+
 import '../services/providers/nft_provider.dart';
 import '../services/providers/transaction_provider.dart';
-import 'transaction_history/transaction_screen.dart';
-import 'dashboard/wallet_screen.dart';
-import 'package:provider/provider.dart';
 import '../utils/theme.dart';
-import 'package:flutter/material.dart';
+import 'dashboard/wallet_screen.dart';
+import 'transaction_history/transaction_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   static const route = '/home';
   HomeScreen({this.index = 0, super.key});
-  int index;
+  final int index;
 
   @override
   State<HomeScreen> createState() => _HomeScreenState();

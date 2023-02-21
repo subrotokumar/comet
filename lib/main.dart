@@ -1,14 +1,16 @@
-import 'package:comet/pages/auth/login_screen.dart';
-import 'package:comet/pages/splash/welcome_splash_screen.dart';
-import 'package:comet/pages/home.dart';
-import 'package:comet/services/providers/transaction_provider.dart';
-import 'package:comet/services/providers/nft_provider.dart';
-import 'package:comet/services/providers/walletprovider.dart';
 import 'package:flutter/material.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+
+import 'package:comet/pages/auth/login_screen.dart';
+import 'package:comet/pages/home.dart';
+import 'package:comet/pages/splash/welcome_splash_screen.dart';
+import 'package:comet/services/providers/nft_provider.dart';
+import 'package:comet/services/providers/transaction_provider.dart';
+import 'package:comet/services/providers/walletprovider.dart';
+
 import 'pages/splash/splash_screen.dart';
-import 'package:hive_flutter/hive_flutter.dart';
 
 var isLogged = true;
 void main() async {

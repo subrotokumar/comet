@@ -1,9 +1,10 @@
 import 'dart:convert';
 
+import 'package:flutter/material.dart';
+import 'package:http/http.dart' as http;
+
 import 'package:comet/services/models/nft_model.dart';
 import 'package:comet/services/providers/walletprovider.dart';
-import 'package:flutter/cupertino.dart';
-import 'package:http/http.dart' as http;
 
 class NFTProvider with ChangeNotifier {
   bool isLoading = false;

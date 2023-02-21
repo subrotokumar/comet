@@ -1,11 +1,13 @@
-import 'package:comet/services/models/transaction_model.dart';
-import 'package:comet/services/functions/functions.dart';
-import 'package:comet/utils/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:web3dart/web3dart.dart';
+
+import 'package:comet/services/functions/functions.dart';
+import 'package:comet/services/models/transaction_model.dart';
+import 'package:comet/utils/theme.dart';
+
 import '../../services/providers/walletprovider.dart';
 
 class TransactionDetailScreen extends StatelessWidget {
@@ -139,7 +141,13 @@ class TransactionDetailScreen extends StatelessWidget {
                           'Function',
                           style: titleTextStyle,
                         ),
-                        trailing: Text(data.functionName),
+                        trailing: SizedBox(
+                          width: MediaQuery.of(context).size.width * 0.5,
+                          child: Text(
+                            data.functionName,
+                            textAlign: TextAlign.end,
+                          ),
+                        ),
                       ),
                     ListTile(
                       leading: Text(
@@ -216,7 +224,7 @@ class TransactionDetailScreen extends StatelessWidget {
                 ),
                 child: const Center(
                   child: Text(
-                    'View on Block',
+                    'View on Block Explorer',
                     style: TextStyle(
                       color: AppTheme.textColor,
                       fontSize: 17,

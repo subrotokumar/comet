@@ -1,21 +1,22 @@
 import 'dart:io';
 
-import 'package:comet/pages/Settings/show_privatekey_screen.dart';
-import 'package:comet/pages/auth/set_passcode_screen.dart';
-import 'package:comet/pages/Settings/show_recovery_phase_screen.dart';
-import 'package:comet/pages/home.dart';
-import 'package:comet/pages/splash/splash_screen.dart';
-import 'package:comet/services/functions/social_link.dart';
-import 'package:comet/utils/constants.dart';
-import 'package:comet/services/functions/functions.dart';
-import 'package:comet/utils/theme.dart';
-import 'package:comet/services/providers/walletprovider.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:hive/hive.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher_string.dart';
+
+import 'package:comet/pages/Settings/show_privatekey_screen.dart';
+import 'package:comet/pages/Settings/show_recovery_phase_screen.dart';
+import 'package:comet/pages/auth/set_passcode_screen.dart';
+import 'package:comet/pages/home.dart';
+import 'package:comet/pages/splash/splash_screen.dart';
+import 'package:comet/services/functions/functions.dart';
+import 'package:comet/services/functions/social_link.dart';
+import 'package:comet/services/providers/walletprovider.dart';
+import 'package:comet/utils/constants.dart';
+import 'package:comet/utils/theme.dart';
 
 class SettingsScreen extends StatelessWidget {
   const SettingsScreen({super.key});
@@ -356,7 +357,10 @@ class SettingsScreen extends StatelessWidget {
                               onPressed: () {
                                 if (Platform.isAndroid) {
                                   launchUrlString(
-                                      'https://play.google.com/store/apps/details?id=com.subrotokumar.comet');
+                                    'https://play.google.com/store/apps/details?id=com.subrotokumar.comet',
+                                    mode: LaunchMode
+                                        .externalNonBrowserApplication,
+                                  );
                                 }
                               },
                               child: Text(

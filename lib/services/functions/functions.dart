@@ -1,9 +1,10 @@
-import 'package:comet/services/providers/walletprovider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'package:web3dart/web3dart.dart';
+
+import 'package:comet/services/providers/walletprovider.dart';
 
 import '../../../utils/theme.dart';
 

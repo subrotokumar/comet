@@ -1,8 +1,10 @@
-import 'package:comet/services/providers/walletprovider.dart';
-import 'package:provider/provider.dart';
-import '../../utils/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:provider/provider.dart';
+
+import 'package:comet/services/providers/walletprovider.dart';
+
+import '../../utils/theme.dart';
 
 class ShowRecoveryPhaseScreen extends StatelessWidget {
   ShowRecoveryPhaseScreen({super.key});

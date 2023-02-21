@@ -1,14 +1,15 @@
 import 'dart:math';
 
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:comet/pages/send_transaction/send_token_screen.dart';
-import 'package:comet/services/functions/functions.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:hive/hive.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
 import 'package:shimmer/shimmer.dart';
+
+import 'package:comet/pages/send_transaction/send_token_screen.dart';
+import 'package:comet/services/functions/functions.dart';
 
 import '../../services/providers/walletprovider.dart';
 

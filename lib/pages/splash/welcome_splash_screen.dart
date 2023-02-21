@@ -1,12 +1,13 @@
-import 'package:comet/pages/auth/login_screen.dart';
-import 'package:comet/utils/lottie_asset.dart';
-import 'package:comet/utils/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:hive/hive.dart';
 import 'package:lottie/lottie.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
+
+import 'package:comet/pages/auth/login_screen.dart';
+import 'package:comet/utils/lottie_asset.dart';
+import 'package:comet/utils/theme.dart';
 
 import '../../services/providers/walletprovider.dart';
 
@@ -67,14 +68,14 @@ class _SplashScreenState extends State<WelcomeSplashScreen> {
                           child: LottieBuilder.asset(LottieFiles.createWallet),
                         ),
                         Text(
-                          'Created with 🤍 for everyone',
+                          'Wallet that meets your needs!',
                           style: GoogleFonts.poppins(
                             fontSize: 18,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
                         Text(
-                          'Secure • Powerfull • Easy',
+                          'Secure • Powerful • Easy',
                           style: GoogleFonts.poppins(fontSize: 15),
                         ),
                         SizedBox(height: 30),

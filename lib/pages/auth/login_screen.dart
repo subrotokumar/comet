@@ -1,9 +1,11 @@
-import 'package:comet/pages/auth/enter_recovery.dart';
-import 'package:comet/pages/auth/recovery_phase_screen.dart';
-import '../../utils/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import 'package:page_transition/page_transition.dart';
+
+import 'enter_recovery.dart';
+import 'recovery_phase_screen.dart';
+
+import '../../utils/theme.dart';
 
 class LoginScreen extends StatelessWidget {
   static const route = '/login';

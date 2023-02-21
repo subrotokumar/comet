@@ -1,10 +1,11 @@
-import 'package:comet/pages/home.dart';
-import 'package:comet/services/functions/functions.dart';
-import 'package:comet/services/providers/walletprovider.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
+
+import 'package:comet/pages/home.dart';
+import 'package:comet/services/functions/functions.dart';
+import 'package:comet/services/providers/walletprovider.dart';
 
 import '../../utils/theme.dart';
 
